@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Utoon Reader Pro",
+  "short_name": "Utoon Pro",
+  "version": "4.0.0",
+  "description": "Professional manga reader with bypass features and modern design.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://utoon.net/*",
+    "https://www.highperformanceformat.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["bundle_reader.js"],
+      "matches": ["https://utoon.net/*"]
+    }
+  ]
+}
